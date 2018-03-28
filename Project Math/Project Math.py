@@ -2,7 +2,7 @@ import math
 pi = 3.14159
 print("Hello welcome to the math equation completion system")
 print("What would you like to do today")
-selection1 = int(input("1. Arc Length\n2. Sector Area\n3.Average Sequencer\n"))
+selection1 = int(input("1. Arc Length\n2. Sector Area\n3. Average Sequencer\n4. Percentage Change Calculator\5. Prime Number Calculator"))
 if selection1 == 1: #Arc Length
     print("Welcome to the arc length calculator!")
     circleAngle = int(input("What is the angle? "))
@@ -44,15 +44,13 @@ elif selection1 == 4: #Percentage Change Calculator
         print((change*100 - 100)*-1, "percent loss")
     elif change == 1:
         print("No change")
-elif selection1 == 5:
-    print("Hello, welcome to the percentage change calculator! Please input a initial value and final value and I will inform you of the percentage change")
-    initialValue = int(input("Initial value\n"))
-    finalValue = int(input("Final value\n"))
-    change = finalValue/initialValue
-    print(change*100, "percent of inital value")
-    if change > .1:
-        print(change*100 - 100, "percent Gain")
-    elif change < .1:
-        print((change*100 - 100)*-1, "percent loss")
-    elif change == 1:
-        print("No change")
+elif selection1 == 5: #Prime Number Calculator
+    print("Hello, welcome to the prime number calculator! Input one number and you will recieve information whether that number and all numbers below it are prime")
+    howMuch = int(input("Up to what number would you like to check for primes? "))
+    for n in range (2,howMuch+1):
+        for x in range (2,n):
+            if n % x == 0:
+                print(n, "is not prime")
+                break
+        else:
+            print(n, "is a prime number")
