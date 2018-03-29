@@ -57,3 +57,12 @@ elif selection1 == 5: #Prime Number Calculator
 elif selection1 == 6:
     print("Hello, welcome to the equation finder. Input the coordinates of two points to recieve a linear function which passes through both of them")
     #WIP
+elif selection1 == 7:
+    print("Hello, welcome to the quadriatic equation solver! Please input the a, b , and c values of your quadriatic function and you will recieve both roots")
+    a = int(input("The a of your quadriatic function\n"))
+    b = int(input("The b of your quadriatic function\n"))
+    c = int(input("The c of your quadriatic function\n"))
+    discriminant = (b**2) - 4*(a)*(c)
+    solution1 = ((-b)+math.sqrt(discriminant))/2*(a)
+    solution2 = ((-b)-math.sqrt(discriminant))/2*(a)
+    print("Your solutions are",solution1,"and",solution2)
