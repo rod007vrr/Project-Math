@@ -2,7 +2,7 @@ import math
 pi = 3.14159
 print("Hello welcome to the math equation completion system")
 print("What would you like to do today")
-selection1 = int(input("1. Arc Length\n2. Sector Area\n3. Average Sequencer\n4. Percentage Change Calculator\5. Prime Number Calculator"))
+selection1 = int(input("1. Arc Length\n2. Sector Area\n3. Average Sequencer\n4. Percentage Change Calculator\n5. Prime Number Calculator\n6. Equation of a linear function\n 7. Quadriatic function solver"))
 if selection1 == 1: #Arc Length
     print("Welcome to the arc length calculator!")
     circleAngle = int(input("What is the angle? "))
@@ -54,3 +54,6 @@ elif selection1 == 5: #Prime Number Calculator
                 break
         else:
             print(n, "is a prime number")
+elif selection1 == 6:
+    print("Hello, welcome to the equation finder. Input the coordinates of two points to recieve a linear function which passes through both of them")
+    #WIP
