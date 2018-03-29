@@ -54,10 +54,10 @@ elif selection1 == 5: #Prime Number Calculator
                 break
         else:
             print(n, "is a prime number")
-elif selection1 == 6:
-    print("Hello, welcome to the equation finder. Input the coordinates of two points to recieve a linear function which passes through both of them")
+elif selection1 == 6: #Linear Equation finder
+    print("Hello, welcome to the linear function finder. Input the coordinates of two points to recieve a linear function which passes through both of them")
     #WIP
-elif selection1 == 7:
+elif selection1 == 7: #Quadsolv
     print("Hello, welcome to the quadriatic equation solver! Please input the a, b , and c values of your quadriatic function and you will recieve both roots")
     a = int(input("The a of your quadriatic function\n"))
     b = int(input("The b of your quadriatic function\n"))
