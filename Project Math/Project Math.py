@@ -56,7 +56,13 @@ elif selection1 == 5: #Prime Number Calculator
             print(n, "is a prime number")
 elif selection1 == 6: #Linear Equation finder
     print("Hello, welcome to the linear function finder. Input the coordinates of two points to recieve a linear function which passes through both of them")
-    #WIP
+    x1 = float(input("X value for coordinate 1\n"))
+    y1 = float(input("Y value for coordinate 1\n"))
+    x2 = float(input("X value for coordinate 2\n"))
+    y2 = float(input("Y value for coordinate 2\n"))
+    slope = ((y2-y1)/(x2-x1))
+    intercept = (y2-(slope * x2))
+    print("Equation is",slope ,("x"),"+",intercept)
 elif selection1 == 7: #Quadsolv
     print("Hello, welcome to the quadriatic equation solver! Please input the a, b , and c values of your quadriatic function and you will recieve both roots")
     a = int(input("The a of your quadriatic function\n"))
