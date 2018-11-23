@@ -6,7 +6,7 @@ elif angle =90:
     print("A angle of " Angle, " degrees is a right angle")
 elif angle >90 and angle<180:
     print("A angle of " Angle, " degrees is a obtuse angle")
-elif angle=180:
+elif angle==180:
     print("A angle of " Angle, " degrees is a striaght angle")
 elif angle>180:
     print("A angle of " Angle, " degrees is a reflex angle")
