@@ -1,0 +1,3 @@
+print("Welcome to the sum of all interior angles finder. To use this simply just input how many sides your polygon has and you will know the sum of all its interior angles.")
+sides = int(input("How many sides does your polygon have?\n"))
+print("The sum of all interior angles for a polygon with", sides,"sides is",180*(sides-2))
