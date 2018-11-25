@@ -1,0 +1,34 @@
+print("Hello, welcome to the combined probability calculator. Please input the number of possible outcomes, and  the number of desired outcomes for both tests and you will recive the combined probability.")
+pOCA = int(input("The total number of outcomes for test A:\n"))
+dOCA = int(input("The amount of desired outcomes out of the possible outcomes for test A:\n"))
+pOCB = int(input("The total number of outcomes for test B:\n"))
+dOCB = int(input("The amount of desired outcomes out of the possible outcomes for test B:\n"))
+#Desired Both
+numDesBoth = dOCA*dOCB
+denominator = pOCA*pOCB
+for n in range(denominator, 2,-1):
+    if numDesBoth%n == 0 and denominator%n == 0:
+        numDesBoth = numDesBoth/n
+        denominator = denominator/n
+print("The chances of desired outcomes coming from both tests are", numDesBoth, "out of", denominator)
+#Desired None
+numAntiDesBoth = (pOCA-dOCA)*(pOCB-dOCB)
+for n in range(denominator, 2,-1):
+    if numAntiDesBoth%n == 0 and denominator%n == 0:
+        numAntiDesBoth = numAntiDesBoth/n
+        denominator = denominator/n
+print("The chances of desired outcomes coming from no tests are", numAntiDesBoth, "out of", denominator)
+#Desired A
+numDesA = (dOCA)*(pOCB-dOCB)
+for n in range(denominator, 2,-1):
+    if numAntiDesBoth%n == 0 and denominator%n == 0:
+        numAntiDesBoth = numAntiDesBoth/n
+        denominator = denominator/n
+print("The chances of desired outcomes coming from only test A are", numDesA, "out of", denominator)
+#Desired B
+numDesB = (dOCB)*(pOCA-dOCA)
+for n in range(denominator, 2,-1):
+    if numAntiDesBoth%n == 0 and denominator%n == 0:
+        numAntiDesBoth = numAntiDesBoth/n
+        denominator = denominator/n
+print("The chances of desired outcomes coming from only test B are", numDesB, "out of", denominator)
