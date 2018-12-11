@@ -1,0 +1,4 @@
+print("Welcome to the reverse percentage calculator! Please input the final number and the percentage of the orignal number that it is.")
+finalnumber = float(input("What is your ending number after the change:\n"))
+percentage = float(input("What is the percentage by which your number was modified\n"))
+print("Your original number is", finalnumber/(percentage/100))
