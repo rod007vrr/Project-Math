@@ -14,7 +14,7 @@ total = 0
 for n in dataset:
     total+=n
     amount+=1
-    average = total/amount
+average = total/amount
 print("The average is: {}".format(average))
 print("The median is: {}".format(statistics.median(dataset)))
 print("The range is: {}".format(max(dataset)-min(dataset)))
