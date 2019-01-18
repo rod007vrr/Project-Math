@@ -1,0 +1,8 @@
+import math
+print("Welcome to the regular polygon area calculator, please input how many sides you have and the length of one of the sides")
+nSides = float(input("How many sides?\n"))
+lSide = float(input("What is the length of your sides?\n"))
+perimeter = nSides*lSide
+apothem = lSide/(2*math.tan(math.pi/nSides))
+area = (apothem*perimeter)/2
+print("The area of your polygon is", area, "units.")
