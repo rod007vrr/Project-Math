@@ -1,0 +1,6 @@
+print("Welcome to the velocity calculator, please input the unit of measurement for distance, the amount of distance covered in the unit given, the unit of measurement for time, and the amount of time in the unit given.")
+distanceUnit = input("What is the unit for distance?\n")
+distanceAmount = int(input("What is the amount of distance\n"))
+timeUnit = input("What is the unit for time?\n")
+timeAmount = int(input("What is the amount of time?\n"))
+print("The velocity of your object  is", distanceAmount/timeAmount, distanceUnit, "per", timeUnit)
