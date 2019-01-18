@@ -1,0 +1,48 @@
+import math
+print("Welcome to the basic trigonometry calculator! Please input all the information you have to recieve your results! When you are prompted for  data point, if you do not have it please just input 0.")
+dataLost = 0
+angTheta = float(input("What is the value of angle theta?\n"))
+lenAdjacent = float(input("What is the length of line adjacent to angle theta?\n"))
+lenOpposite = float(input("What is the length of the line opposite to angle theta?\n"))
+lenHypotenuse = float(input("What is the length of the hypotenuse?\n"))
+if angTheta == 0:
+    dataLost += 1
+if lenAdjacent == 0:
+    dataLost += 1
+if lenOpposite == 0:
+    dataLost += 1
+if lenHypotenuse == 0:
+    dataLost += 1
+if dataLost >= 3:
+    print("Sorry, we need more data.")
+if angTheta == 0 and lenAdjacent != 0 and lenOpposite != 0:
+    angTheta = math.degrees(math.atan(lenOpposite/lenAdjacent))
+elif angTheta == 0 and lenAdjacent != 0 and lenHypotenuse != 0:
+    angTheta = math.degrees(math.acos(lenAdjacent/lenHypotenuse))
+elif angTheta == 0 and lenOpposite != 0 and lenHypotenuse != 0:
+    angTheta = math.degrees(math.asin(lenOpposite/lenHypotenuse))
+if lenAdjacent == 0 and angTheta != 0 and lenHypotenuse != 0:
+    lenAdjacent = math.cos(angTheta)*lenHypotenuse
+elif lenAdjacent == 0 and angTheta != 0 and lenOpposite != 0:
+    lenAdjacent = lenOpposite/math.tan(angTheta)
+elif lenAdjacent == 0 and lenOpposite != 0 and lenHypotenuse != 0:
+    #the one where it comes in knowing hypotenuse and opposite
+    print("Nothing")
+if lenOpposite == 0 and angTheta != 0 and lenHypotenuse != 0:
+    lenOpposite == math.sin(angTheta) * lenHypotenuse
+elif lenOpposite == 0 and angTheta != 0 and lenAdjacent != 0:
+    lenOpposite = math.tan(angTheta) * lenAdjacent
+elif lenOpposite == 0 and lenAdjacent != 0 and lenOpposite != 0:
+    print("Nothing")
+    #the one where you find it from adjacent and hypotenuse
+if lenHypotenuse == 0 and angTheta != 0 and lenOpposite != 0:
+    lenHypotenuse = lenOpposite/math.sin(angTheta)
+elif lenHypotenuse == 0 and angTheta != 0 and lenAdjacent != 0:
+    lenHypotenuse = lenAdjacent/math.cos(angTheta)
+elif lenHypotenuse == 0 and lenAdjacent != 0 and lenOpposite != 0:
+    #the one where you find with adjacent and opposite
+    print("Nothing")
+print("Your Hypotenuse is", lenHypotenuse)
+print("The length of the line adjacent to angle Theta is", lenAdjacent)
+print("The length of the line opposite to angle Theta is", lenOpposite)
+print("Angle Theta is", angTheta, "degrees")
